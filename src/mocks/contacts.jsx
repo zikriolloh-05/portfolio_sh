@@ -19,7 +19,6 @@ const contacts = {
       username: "@shahrom123",
       url: "https://www.linkedin.com/in/shahrom-sharipov-179344271/"
     },
-
   ]
 };
 

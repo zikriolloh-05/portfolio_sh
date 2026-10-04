@@ -7,91 +7,48 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <Title number="03">Проекты</Title>
-        <div className="projects-grid">
-          {projects.length > 0 ? (
-            projects.map((project) => (
-              <div key={project.id} className="project-card">
+        <Title number="03">мой опыт</Title>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Payvand.tj</h3>
 
-                {/* Картинка-ссылка */}
-                {project.image ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-image-link"
-                  >
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="project-image"
-                    />
-                  </a>
-                ) : (
-                  <div className="project-placeholder">
-                    <span>🚀</span>
-                    <p>{project.title}</p>
-                  </div>
-                )}
+            <div class="meta-row">
+              <span class="meta-location">.NET-разработчик · Полный рабочий день</span>
+            </div>
 
-                <div className="project-info">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+            {/* <div class="role-row"> */}
+              <span class="meta-location">Душанбе, Таджикистан · Работа в офисе</span>
+            {/* </div> */}
 
-                  <div className="project-technologies">
-                    {project.technologies.map((tech, index) => (
-                      <span key={index} className="project-tag">{tech}</span>
-                    ))}
-                  </div>
+            <div class="date-range">янв. 2024 – дек. 2025</div>
 
-                  {/* Кнопки под проектом */}
-                  <div className="project-actions">
-                    {project.link && project.link !== '#' && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-btn demo"
-                      >
-                        🔗 Демо
-                      </a>
-                    )}
-                    {project.github && project.github !== '#' && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-btn github"
-                      >
-                        💻 GitHub
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <>
-              <div className="project-card">
-                <div className="project-placeholder">
-                  <span>🚀</span>
-                  <p>Добавьте ваши проекты</p>
-                </div>
-              </div>
-              <div className="project-card">
-                <div className="project-placeholder">
-                  <span>💡</span>
-                  <p>Добавьте ваши проекты</p>
-                </div>
-              </div>
-              <div className="project-card">
-                <div className="project-placeholder">
-                  <span>⚡</span>
-                  <p>Добавьте ваши проекты</p>
-                </div>
-              </div>
-            </>
-          )}
+            {/* <div class="project-desc">Проект: Система управления мобильным приложением «Пайванд Кошелёк»</div>
+            <div class="role-detail">Роль: Full-stack .NET Developer</div>
+
+            <div class="achievements-label">Ключевые достижения:</div>
+
+            <div class="achievement-item">Миграция проекта с .NET 6 на .NET 8 с оптимизацией архитектуры.</div>
+            <div class="achievement-item">Разработка модуля отчётности с фильтрацией данных и экспортом в XML, Excel и CSV.</div>
+            <div class="achievement-item">Реализация полноценного модуля идентификации клиентов (frontend + backend).</div>
+            <div class="achievement-item">Настройка системы администрирования: управление ролями, правами доступа, лимитами переводов, комиссиями и кешбэком.</div>
+            <div class="achievement-item">Работа в команде с использованием Git / GitHub.</div> */}
+
+          </div>
+
+          {/* <hr class="divider"></hr> */}
+
+          <div class="project-card">
+            <h3>Finca.tj</h3>
+
+            <div class="role-row">
+              <span class="meta-location">.NET-разработчик · Полный рабочий день</span>
+            </div>
+            <div class="meta-location">Душанбе, Таджикистан · Работа в офисе</div>
+
+            <div class="date-range">янв. 2026 – настоящее время</div>
+
+          </div>
+
         </div>
       </div>
     </section>

@@ -52,7 +52,7 @@ function App() {
       <Home onScrollToSection={scrollToSection} />
       <About />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <Contacts />
       <Footer />
     </div>
