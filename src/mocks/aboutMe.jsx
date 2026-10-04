@@ -8,7 +8,6 @@ const aboutMe = {
   ],
   stats: [
     { number: "3+", label: "Года опыта" },
-    { number: "15+", label: "Проектов" }
   ]
 };
 

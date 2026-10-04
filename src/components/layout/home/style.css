@@ -163,7 +163,7 @@
   height: 300px;
   overflow: hidden;
   border-radius: 50%;
-  margin-left: 11px;
+  margin-left: 17px;
 }
 
 .hero-image {
@@ -197,7 +197,7 @@
 
   .hero-buttons {
     display: flex;
-    width:309px;
+    /* width:309px; */
     flex-wrap: nowrap;
   }
   .hero-title {
