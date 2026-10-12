@@ -7,6 +7,7 @@ import Skills from '../layout/skills/skills';
 import Projects from '../layout/projects/projects';
 import Contacts from '../layout/contacts/contacts';
 import './style.css';
+import TechSection from '../layout/TechSection/techSection';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -53,6 +54,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <TechSection/>
       <Contacts />
       <Footer />
     </div>

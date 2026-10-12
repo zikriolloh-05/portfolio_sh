@@ -1,3 +1,4 @@
+/* ============ ВЕРХНИЙ НАВБАР ============ */
 .navbar {
   position: fixed;
   top: 0;
@@ -62,24 +63,7 @@
   color: var(--primary);
 }
 
-@media (max-width: 768px) {
-  .nav-menu {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-container {
-    padding: 0 1rem;
-  }
-
-  .nav-menu {
-    gap: 0.5rem;
-    font-size: 0.8rem;
-  }
-}
-
+/* ============ КНОПКА РЕЗЮМЕ ============ */
 .resume-btn {
   display: inline-block;
   padding: 8px 18px;
@@ -91,21 +75,24 @@
 }
 
 .resume-btn:hover {
-  background:transparent;
+  background: transparent;
   transform: translateY(-2px);
 }
+
 .iconDownload {
   position: relative;
   top: 3px;
   left: 3px;
 }
 
+/* ============ НИЖНИЙ НАВБАР (скрыт на десктопе) ============ */
 .bottom-nav {
   display: none;
 }
 
+/* ============ МОБИЛЬНАЯ ВЕРСИЯ ============ */
 @media (max-width: 768px) {
-
+  /* Верхний навбар */
   .nav-container {
     padding: 0 1rem;
     justify-content: space-between;
@@ -113,7 +100,6 @@
     gap: 10px;
   }
 
-  /* Логотип — виден, не сжимается, не уезжает */
   .nav-container > *:first-child {
     display: flex;
     align-items: center;
@@ -141,7 +127,7 @@
     font-size: 13px;
   }
 
-  /* --- Нижняя панель --- */
+  /* ============ НИЖНИЙ НАВБАР ============ */
   .bottom-nav {
     display: flex;
     position: fixed;
@@ -149,30 +135,106 @@
     left: 0;
     right: 0;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     background: #010112;
-    padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+    padding: 6px 0 calc(6px + env(safe-area-inset-bottom));
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, .15);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
   }
 
   .bottom-nav a {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    color: #fff;
+    color: #8b93a7;
     text-decoration: none;
-    opacity: .55;
-    transition: opacity .2s, transform .2s;
     font-size: 11px;
+    font-weight: 500;
     flex: 1;
     text-align: center;
+    padding: 8px 4px 10px;
+    border-radius: 12px;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+    background: transparent;
   }
 
-  .bottom-nav a.active { opacity: 1; }
-  .bottom-nav a:active { transform: scale(.9); }
+  /* Ховер / нажатие — легкая подсветка */
+  .bottom-nav a:hover {
+    color: #d4dae8;
+    background: rgba(255, 255, 255, 0.05);
+  }
 
-  body { padding-bottom: 80px; }
+  .bottom-nav a:active {
+    transform: scale(0.94);
+  }
+
+  /* Иконка — обычное состояние */
+  .bottom-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+    border-radius: 10px;
+  }
+
+  /* Иконка внутри — чтобы можно было красить через currentColor */
+  .bottom-nav-icon img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: brightness(0) invert(0.55); /* серый цвет иконки */
+    transition: filter 0.25s ease, transform 0.25s ease;
+  }
+
+  /* ============ АКТИВНЫЙ РАЗДЕЛ ============ */
+  .bottom-nav a.active {
+    color: #00d1b2;
+    background: rgba(0, 209, 178, 0.08);
+  }
+
+  .bottom-nav a.active .bottom-nav-icon {
+    background: rgba(0, 209, 178, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .bottom-nav a.active .bottom-nav-icon img {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(85%) saturate(500%) hue-rotate(120deg) brightness(105%) contrast(95%);
+    transform: scale(1.08);
+  }
+
+  /* Цветная полоска снизу у активной вкладки */
+  .bottom-nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 3px;
+    background: #00d1b2;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 209, 178, 0.6);
+  }
+
+  /* Отступ снизу, чтобы навбар не перекрывал контент */
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
 }

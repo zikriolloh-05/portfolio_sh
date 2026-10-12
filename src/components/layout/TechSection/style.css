@@ -1,0 +1,60 @@
+.tech-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tech-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e7ecee;
+  margin-bottom: 8px;
+}
+
+.tech-subtitle {
+  font-size: 15px;
+  color: #849ab0;
+  margin-bottom: 28px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tech-card {
+  background: var(--dark-light);
+  border: 1px solid #e2eef7;
+  border-radius: 12px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.tech-card:hover {
+  border-color: #1e7b9e;
+  transform: translateY(-3px);
+}
+
+.tech-label {
+  font-size: 13px;
+  color:white;
+}
+
+.tech-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #92afc0;
+}
+
+@media (max-width: 600px) {
+  .tech-section { margin: 40px auto; }
+  .tech-title { font-size: 20px; }
+  .tech-subtitle { font-size: 14px; }
+  .tech-grid { grid-template-columns: 1fr; gap: 12px; }
+  .tech-name { font-size: 18px; }
+}

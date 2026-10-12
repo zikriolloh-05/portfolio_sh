@@ -1,39 +1,107 @@
-.projects-grid { max-width: 900px; margin: 0 auto; }
+.projects-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-h3 { font-size: 22px; margin-bottom: 8px; color: #1b84ed; }
+h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--primary)
+}
 
-.meta-row, .role-row {
+.projects {
+  background: var(--dark-light);
+}
+
+.meta-row,
+.role-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 8px;
 }
 
-.achievement-item{
+.achievement-item {
   color: #b6cad2;
 }
 
-.meta-period { font-size: 14px; color: #2c5f7a; }
-.meta-location { font-size: 14px; color: #5a7085; }
-.role-title { font-size: 16px; font-weight: 600; }
-.job-type { font-size: 13px; color: #3b6d8c; }
-.date-range { font-size: 14px; color: #1d5a7a; margin-bottom: 16px; }
+.meta-period {
+  font-size: 14px;
+  color: #2c5f7a;
+}
 
-.role-detail { font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.meta-location {
+  font-size: 18px;
+  color: var(--text)
+}
 
-.achievements-label { font-weight: 700; margin: 12px 0 6px; }
+.role-title {
+  font-size: 16px;
+  font-weight: 600;
+}
 
-.achievement-item { font-size: 14px; padding-left: 16px; position: relative; }
-.achievement-item::before { content: "•"; position: absolute; left: 0; color: #1e7b9e; }
+.job-type {
+  font-size: 13px;
+  color: #3b6d8c;
+}
 
-.expand { font-size: 13px; color: #becfd6; margin-top: 10px; }
+.date-range {
+  font-size: 14px;
+  color: #91b2c4;
+  margin-bottom: 16px;
+}
 
-.divider { border: none; border-top: 1px solid #e6ecf1; margin: 24px 0; }
+.role-detail {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.achievements-label {
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+.achievement-item {
+  font-size: 14px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.achievement-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1e7b9e;
+}
+
+.expand {
+  font-size: 13px;
+  color: #becfd6;
+  margin-top: 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e6ecf1;
+  margin: 24px 0;
+}
 
 @media (max-width: 600px) {
-  /* body { padding: 20px 12px; } */
-  h3 { font-size: 18px; }
-  .project-desc { font-size: 14px; padding: 10px 12px; }
-  .achievement-item { font-size: 13px; }
-  .skills { display: block; text-align: center; font-size: 12px; }
+  h3 {
+    font-size: 18px;
+  }
+  .meta-location{
+    font-size: 15px;
+  }
+
+  .achievement-item {
+    font-size: 13px;
+  }
+
+  .skills {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+  }
 }
