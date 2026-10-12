@@ -111,6 +111,10 @@
   .contact-links {
     grid-template-columns: 1fr;
   }
+
+  .aboutName {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {

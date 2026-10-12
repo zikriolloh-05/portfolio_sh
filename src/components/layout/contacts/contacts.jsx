@@ -26,7 +26,7 @@ function Contacts() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <Title number="04">Контакты</Title>
+        <Title className='aboutName' number="04">Контакты</Title>
         <div className="contact-content">
           <p className="contact-description">
             Свяжитесь со мной через любой из указанных способов

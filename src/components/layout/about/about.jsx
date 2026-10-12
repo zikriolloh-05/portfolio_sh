@@ -7,7 +7,7 @@ function About() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <Title number="01">О себе</Title>
+        <Title className='aboutName' number="01">О себе</Title>
         <div className="about-content">
           <div className="about-text">
             {aboutMe.description.map((paragraph, index) => (
@@ -22,14 +22,14 @@ function About() {
                 ))}
               </p>
             ))}
-            <div className="about-stats">
+            {/* <div className="about-stats">
               {aboutMe.stats.map((stat, index) => (
                 <div key={index} className="stat-item">
                   <div className="stat-number">{stat.number}</div>
                   <div className="stat-label">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

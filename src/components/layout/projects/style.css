@@ -87,16 +87,21 @@ h3 {
   margin: 24px 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   h3 {
     font-size: 18px;
   }
-  .meta-location{
+
+  .meta-location {
     font-size: 15px;
   }
 
   .achievement-item {
     font-size: 13px;
+  }
+
+  .aboutName {
+    font-size: 20px;
   }
 
   .skills {

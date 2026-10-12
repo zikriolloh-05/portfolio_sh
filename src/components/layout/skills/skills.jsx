@@ -7,7 +7,7 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <Title number="02">Навыки</Title>
+        <Title className='aboutName' number="02">Навыки</Title>
         <div className="skills-grid">
           {skills.map((skill) => (
             <div key={skill.id} className="skill-card">
