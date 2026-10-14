@@ -58,3 +58,16 @@
   .tech-grid { grid-template-columns: 1fr; gap: 12px; }
   .tech-name { font-size: 18px; }
 }
+
+.tech-desc {
+  font-size: 13px;
+  color: #849ab0;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .tech-desc {
+    font-size: 13px;
+  }
+}

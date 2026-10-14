@@ -32,7 +32,7 @@ h3 {
 
 .meta-location {
   font-size: 18px;
-  color: var(--text)
+  color: rgba(255, 255, 255, 0.67);
 }
 
 .role-title {
@@ -47,7 +47,7 @@ h3 {
 
 .date-range {
   font-size: 14px;
-  color: #91b2c4;
+  color: rgba(255, 255, 255, 0.603);
   margin-bottom: 16px;
 }
 
@@ -93,7 +93,7 @@ h3 {
   }
 
   .meta-location {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .achievement-item {

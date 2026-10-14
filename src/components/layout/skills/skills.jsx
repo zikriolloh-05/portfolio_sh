@@ -11,8 +11,9 @@ function Skills() {
         <div className="skills-grid">
           {skills.map((skill) => (
             <div key={skill.id} className="skill-card">
-              <div className="skill-icon">{skill.icon}</div>
-              <h3>{skill.category}</h3>
+              <div className="skill-icon">{skill.icon}
+                <h3>{skill.category}</h3>
+              </div>
               <div className="skill-tags">
                 {skill.technologies.map((tech, index) => (
                   <span key={index} className="tag">{tech}</span>

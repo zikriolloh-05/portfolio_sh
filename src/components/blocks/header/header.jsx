@@ -12,7 +12,7 @@ function Header({ activeSection, onScrollToSection, isScrolled }) {
     { id: 'home', label: 'Главная', icon: homeIcon },
     { id: 'about', label: 'О себе', icon: AboutIcon },
     { id: 'skills', label: 'Навыки', icon: SkilsIcon },
-    { id: 'projects', label: 'Проекты', icon: ProjectsIcon },
+    { id: 'projects', label: 'мой опыт', icon: ProjectsIcon },
     { id: 'contact', label: 'Контакты', icon: ContactsIcon }
   ];
 

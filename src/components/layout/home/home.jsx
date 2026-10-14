@@ -33,9 +33,6 @@ function Home({ onScrollToSection }) {
           </div>
         </div>
       </div>
-      {/* <div className="scroll-indicator">
-        <div className="mouse"></div>
-      </div> */}
     </section>
   );
 }

@@ -1,3 +1,4 @@
+/* ============ HERO ============ */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -10,10 +11,7 @@
 
 .hero-background {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   overflow: hidden;
   z-index: 0;
 }
@@ -53,6 +51,7 @@
   animation-delay: 10s;
 }
 
+/* ============ КОНТЕНТ ============ */
 .hero-content {
   max-width: 1200px;
   width: 100%;
@@ -65,18 +64,25 @@
   animation: fadeInUp 1s ease;
 }
 
+/* ============ ФОТО ============ */
 .hero-image-container {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .hero-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
   border: 3px solid var(--primary);
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
   transition: all 0.3s ease;
@@ -86,6 +92,7 @@
   transform: scale(1.05);
 }
 
+/* ============ ТЕКСТ ============ */
 .hero-text {
   animation: fadeInUp 1s ease 0.2s both;
 }
@@ -124,6 +131,7 @@
   flex-wrap: wrap;
 }
 
+/* ============ СКРОЛЛ ============ */
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -150,35 +158,20 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
-
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(15px);
   }
 }
 
-.hero-image-container {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: 17px;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
+/* ============ МОБИЛКА ============ */
 @media (max-width: 768px) {
   .hero-content {
     margin-top: 50px;
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+    justify-items: center;   /* ← фото по центру */
   }
 
   .hero-title {
@@ -189,18 +182,74 @@
     font-size: 1.2rem;
   }
 
-  .hero-image {
+  /* Фото — фиксированный размер, центр */
+  .hero-image-container {
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    max-width: 250px;
+    margin: 0 auto;          /* ← убрал margin-left: 17px */
   }
 
   .hero-buttons {
     display: flex;
-    /* width:309px; */
     flex-wrap: nowrap;
+    justify-content: center;
   }
+}
+
+/* ============ МАЛЕНЬКИЕ ЭКРАНЫ ============ */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero-content {
+    margin-top: 40px;
+    gap: 1.5rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image-container {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
+
+/* ============ ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ ============ */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-image-container {
+    width: 170px;
+    height: 170px;
+    max-width: 170px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }

@@ -193,18 +193,19 @@
   }
 
   /* ============ АКТИВНЫЙ РАЗДЕЛ ============ */
+  /* ============ АКТИВНЫЙ РАЗДЕЛ ============ */
   .bottom-nav a.active {
-    color: #00d1b2;
-    background: rgba(0, 209, 178, 0.08);
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
   }
 
   .bottom-nav a.active .bottom-nav-icon {
-    background: rgba(0, 209, 178, 0.15);
+    background: rgba(99, 102, 241, 0.18);
     transform: translateY(-2px);
   }
 
   .bottom-nav a.active .bottom-nav-icon img {
-    filter: brightness(0) saturate(100%) invert(72%) sepia(85%) saturate(500%) hue-rotate(120deg) brightness(105%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(215deg) brightness(95%) contrast(96%);
     transform: scale(1.08);
   }
 
@@ -217,9 +218,9 @@
     transform: translateX(-50%);
     width: 22px;
     height: 3px;
-    background: #00d1b2;
+    background: var(--primary);
     border-radius: 3px;
-    box-shadow: 0 0 8px rgba(0, 209, 178, 0.6);
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
   }
 
   /* Отступ снизу, чтобы навбар не перекрывал контент */
